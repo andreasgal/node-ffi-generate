@@ -80,6 +80,7 @@ tryClang(function (ret) {
   var library;
 
   if (isNaN(ret)) library = ret;
+  if (process.platform === 'darwin') library = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib';
   if (argv.L) library = argv.L;
 
   if (ret === true) {
